@@ -86,7 +86,7 @@ public class GameImpl implements Game{
 
     @Override
     public boolean isValidNumberRange() {
-        return isValidNumberRange();
+        return validNumberRange;
     }
 
     @Override

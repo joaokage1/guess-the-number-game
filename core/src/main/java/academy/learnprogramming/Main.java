@@ -16,8 +16,10 @@ public class Main {
 
         NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
 
-        Game game = context.getBean(Game.class);
+        MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
 
+        log.info(messageGenerator.getMainMessage());
+        log.info(messageGenerator.getResultMessage());
         context.close();
     }
 }
