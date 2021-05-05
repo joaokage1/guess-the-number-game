@@ -102,4 +102,18 @@ public class GameImpl implements Game{
     private void checkValidNumberRange(){
         validNumberRange = (guess >= smaller) && (guess <= biggest);
     }
+
+    @Override
+    public String toString() {
+        return "GameImpl{" +
+                "numberGenerator=" + numberGenerator +
+                ", guessCount=" + guessCount +
+                ", number=" + number +
+                ", guess=" + guess +
+                ", smaller=" + smaller +
+                ", biggest=" + biggest +
+                ", remainingGuesses=" + remainingGuesses +
+                ", validNumberRange=" + validNumberRange +
+                '}';
+    }
 }
