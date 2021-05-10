@@ -1,5 +1,8 @@
-package academy.learnprogramming;
+package academy.learnprogramming.console;
 
+import academy.learnprogramming.AppConfig;
+import academy.learnprogramming.MessageGenerator;
+import academy.learnprogramming.NumberGenerator;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ConfigurableApplicationContext;
