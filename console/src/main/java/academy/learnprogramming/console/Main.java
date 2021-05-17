@@ -20,9 +20,6 @@ public class Main {
         NumberGenerator numberGenerator = context.getBean(NumberGenerator.class);
 
         MessageGenerator messageGenerator = context.getBean(MessageGenerator.class);
-
-        log.info(messageGenerator.getMainMessage());
-        log.info(messageGenerator.getResultMessage());
         context.close();
     }
 }
