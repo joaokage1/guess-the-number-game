@@ -14,7 +14,10 @@ public class GameImpl implements Game{
     @Autowired
     private NumberGenerator numberGenerator;
 
-    private int guessCount = 10;
+    @Autowired
+    @GuessCount
+    private int guessCount;
+
     private int number;
     private int guess;
     private int smaller;
@@ -50,6 +53,11 @@ public class GameImpl implements Game{
     @Override
     public int getRemainingGuesses() {
         return remainingGuesses;
+    }
+
+    @Override
+    public int getGuessCount() {
+        return guessCount;
     }
 
     @PostConstruct
