@@ -63,8 +63,8 @@ public class GameImpl implements Game{
     @PostConstruct
     @Override
     public void reset() {
-        smaller = 0;
-        guess = 0;
+        smaller = numberGenerator.getMinNumber();
+        guess = numberGenerator.getMinNumber();
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();

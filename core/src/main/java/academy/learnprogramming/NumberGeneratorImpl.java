@@ -12,13 +12,23 @@ public class NumberGeneratorImpl implements NumberGenerator{
     @MaxNumber
     private int maxNumber;
 
+    @Autowired
+    @MinNumber
+    private int minNumber;
+
     @Override
     public int next() {
-        return RANDOM.nextInt(getMaxNumber());
+
+        return RANDOM.nextInt(getMaxNumber() - getMinNumber()) +  getMinNumber();
     }
 
     @Override
     public int getMaxNumber() {
         return this.maxNumber;
+    }
+
+    @Override
+    public int getMinNumber() {
+        return minNumber;
     }
 }
